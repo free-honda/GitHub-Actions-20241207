@@ -32,7 +32,7 @@ jobs:
       # Dockerイメージのビルド
       - name: Build Docker image
         run: |
-          docker build -t ${{ secrets.ECR_REPOSITORY }}:${{ secrets.IMAGE_TAG }} .
+          docker build -t ${{ secrets.ECR_REPOSITORY }}:${{ secrets.IMAGE_TAG }} -f Dockerfile .
 
       # Dockerイメージのタグ付け
       - name: Tag Docker image
